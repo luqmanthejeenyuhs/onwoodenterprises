@@ -5,246 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Onwood Enterprises</title>
 
-<style>
-/* ===== GLOBAL ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
-
-section {
-  padding: 80px 10%;
-}
-
-h1, h2, h3 {
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-/* ===== NAVBAR ===== */
-nav {
-  position: fixed;
-  width: 100%;
-  background: rgba(15,23,42,0.95);
-  padding: 15px 10%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #f59e0b;
-}
-
-/* ===== HERO ===== */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 50px;
-  color: #f59e0b;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-/* ===== CARDS ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* ===== SECTION COLORS ===== */
-.dark {
-  background: #020617;
-}
-
-.accent {
-  color: #f59e0b;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #020617;
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #f59e0b;
-  color: #000;
-  text-decoration: none;
-  margin-top: 20px;
-  border-radius: 5px;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <h3 class="accent">ONWOOD</h3>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">ONWOOD</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Onwood Enterprises</h1>
-    <p>You think construction, you think Onwood</p>
-    <a href="#about" class="btn">Explore</a>
+  <div class="hero-content">
+    <h1>
+      Building Excellence <br>
+      <span>Across Kenya</span>
+    </h1>
+
+    <p>
+      Trusted construction & civil engineering experts delivering
+      world-class projects since 2006.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">Request Quote</a>
+      <a href="#projects" class="btn-outline">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <h2>15+</h2>
+    <p>Years Experience</p>
+  </div>
+  <div class="stat">
+    <h2>200+</h2>
+    <p>Projects Completed</p>
+  </div>
+  <div class="stat">
+    <h2>100%</h2>
+    <p>Client Satisfaction</p>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2>Company Overview</h2>
-  <p>
-    Founded in 2006 in Kilifi County, Onwood Enterprises and General Contractors Ltd 
-    began as a sole proprietorship focused on building construction and civil works.
+<section id="about" class="section hidden">
+  <h2>About Us</h2>
+  <p class="center">
+    We deliver high-quality construction solutions across Kenya,
+    combining engineering expertise, innovation, and reliability.
   </p>
-  <p>
-    The company transitioned into a private limited entity in 2023 under the Companies Act of Kenya.
-  </p>
-  <p>
-    We provide end-to-end construction solutions including structural building, civil works,
-    renovations, and plumbing installations across the Coast Region.
-  </p>
-</section>
 
-<!-- VISION MISSION -->
-<section class="dark">
-  <div class="grid">
+  <div class="about-grid">
     <div class="card">
-      <h3 class="accent">Vision</h3>
-      <p>To be the preferred company for construction and civil works through innovation.</p>
+      <i data-feather="target"></i>
+      <h3>Our Mission</h3>
+      <p>Deliver durable and efficient construction projects.</p>
     </div>
 
     <div class="card">
-      <h3 class="accent">Mission</h3>
-      <p>Deliver high-quality professional services using expertise and innovation.</p>
-    </div>
-
-    <div class="card">
-      <h3 class="accent">Core Values</h3>
-      <p>Timeliness, expertise, quality delivery, and strategic project management.</p>
+      <i data-feather="eye"></i>
+      <h3>Our Vision</h3>
+      <p>To be Kenya’s most trusted construction company.</p>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="section light hidden">
   <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">Building Construction</div>
-    <div class="card">Civil Works</div>
-    <div class="card">Renovations</div>
-    <div class="card">Plumbing Installations</div>
-    <div class="card">Project Management</div>
-  </div>
-</section>
 
-<!-- TARGET CLIENTS -->
-<section class="dark">
-  <h2>Target Customers</h2>
-  <p>
-    We serve individuals, government institutions, private sector companies,
-    NGOs, and developers seeking reliable construction solutions.
-  </p>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section id="why">
-  <h2>Why Choose Us?</h2>
   <div class="grid">
-    <div class="card">Experienced professionals</div>
-    <div class="card">Modern equipment</div>
-    <div class="card">Client-first approach</div>
-    <div class="card">Timely delivery</div>
-    <div class="card">High-quality results</div>
+    <div class="card">
+      <i data-feather="home"></i>
+      <h3>Construction</h3>
+      <p>Residential & commercial projects.</p>
+    </div>
+
+    <div class="card">
+      <i data-feather="tool"></i>
+      <h3>Civil Engineering</h3>
+      <p>Roads, drainage & infrastructure.</p>
+    </div>
+
+    <div class="card">
+      <i data-feather="refresh-cw"></i>
+      <h3>Renovations</h3>
+      <p>Modern upgrades & remodeling.</p>
+    </div>
+
+    <div class="card">
+      <i data-feather="droplet"></i>
+      <h3>Plumbing</h3>
+      <p>Reliable water systems.</p>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="dark">
-  <h2>Selected Projects</h2>
-  <p>
-    We have successfully completed multiple construction and civil engineering projects
-    across Kilifi County and the Coastal region.
-  </p>
-</section>
+<section id="projects" class="section hidden">
+  <h2>Our Projects</h2>
 
-<!-- GALLERY -->
-<section>
-  <h2>Project Gallery</h2>
   <div class="grid">
-    <div class="card">Project Image</div>
-    <div class="card">Project Image</div>
-    <div class="card">Project Image</div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+      <div class="overlay">Apartment Complex</div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d42ccfa8a93">
+      <div class="overlay">Road Construction</div>
+    </div>
+
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+      <div class="overlay">Commercial Building</div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="dark">
-  <h2>Let's Build Together</h2>
-  <p>Contact us today to start your next project.</p>
-  <p>Email: info@onwood.co.ke</p>
-  <p>Phone: +254 XXX XXX XXX</p>
+<section id="contact" class="section hidden">
+  <h2>Contact Us</h2>
+
+  <div class="contact-grid">
+    <div>
+      <p>Email: info@onwood.co.ke</p>
+      <p>Phone: +254 7XX XXX XXX</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Onwood Enterprises & General Contractors Ltd</p>
+  <p>© 2026 Onwood Enterprises</p>
 </footer>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar");
+  
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+  </script>
+<script>
+feather.replace();
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

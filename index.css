@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: transparent; /* fully invisible */
+  backdrop-filter: none;   /* remove blur */
+  border: none;
+  transition: all 0.3s ease;
+}
+
+
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.nav-container {
+  height: 80px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  color: #f97316;
+  font-size: 22px;
+
+}
+
+.nav-links a {
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  color: #f97316;;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #f97316;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  background: #f97316;
+}
+
+
+.nav-cta {
+  background: #f97316;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+.navbar.scrolled .nav-links a {
+  color: #1f2937;
+}.navbar.scrolled .nav-links a {
+  color: #1f2937;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url('images/image64.jpeg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.5)
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #f97316;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+.hero-buttons {
+  margin-top: 80px;
+}
+
+/* BUTTONS */
+.btn {
+  background: #f97316;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ea580c;
+}
+.btn-outline:hover{
+  background: #ea580c;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #f97316;
+  padding: 12px 22px;
+  border-radius: 6px;
+  color: #f97316;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.light {
+  background: #f9fafb;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #f97316;
+  color: white;
+  padding: 60px;
+}
+
+.stat h2 {
+  font-size: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* PROJECTS */
+.project {
+  position: relative;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ANIMATIONS */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+}
+
+@media(max-width:768px){
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 80px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
