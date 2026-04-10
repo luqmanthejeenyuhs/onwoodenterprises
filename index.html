@@ -1,195 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Onwood Enterprises</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
-<script src="https://unpkg.com/feather-icons"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Onwood Enterprises | Premier Construction Kenya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">ONWOOD</div>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/onwoodlogo.png" alt="Onwood Enterprises Logo">
+        <span>Onwood Enterprises</span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
 
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Building Excellence <br><span>Across Kenya</span></h1>
+      <p>Trusted construction & civil engineering experts delivering world-class projects since 2006.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn" onclick="openQuoteModal()">Request Quote</a>
+        <a href="#projects" class="btn-outline">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <h2>15+</h2>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat">
+      <h2>200+</h2>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat">
+      <h2>100%</h2>
+      <p>Client Satisfaction</p>
+    </div>
+  </section>
+
+  <!-- ABOUT (with slideshow using local images) -->
+  <section id="about" class="section hidden">
+    <h2>About Us</h2>
+    <p class="center">We deliver high-quality construction solutions across Kenya, combining engineering expertise,
+      innovation, and reliability.</p>
+
+    <div class="about-grid">
+      <div class="card">
+        <i data-feather="target"></i>
+        <h3>Our Mission</h3>
+        <p>Deliver durable and efficient construction projects that transform communities.</p>
+      </div>
+      <div class="card">
+        <i data-feather="eye"></i>
+        <h3>Our Vision</h3>
+        <p>To be Kenya's most trusted construction company & infrastructure leader.</p>
+      </div>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </div>
-</nav>
+    <!-- SLIDESHOW with LOCAL IMAGES from images folder -->
+    <div class="about-slider">
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <img src="images/image28.jpeg" class="slider-img" alt="Construction project 1">
+          <img src="images/image29.jpeg" class="slider-img" alt="Construction project 2">
+          <img src="images/image30.jpeg" class="slider-img" alt="Construction project 3">
+          <img src="images/image31.jpeg" class="slider-img" alt="Construction project 4">
+          <img src="images/image32.jpeg" class="slider-img" alt="Construction project 5">
+        </div>
+        <button class="slider-btn prev-btn" id="prevSlideBtn">‹</button>
+        <button class="slider-btn next-btn" id="nextSlideBtn">›</button>
+      </div>
+      <div class="slider-dots" id="dotsContainer"></div>
+    </div>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>
-      Building Excellence <br>
-      <span>Across Kenya</span>
-    </h1>
-
-    <p>
-      Trusted construction & civil engineering experts delivering
-      world-class projects since 2006.
+  <!-- SERVICES -->
+  <section id="services" class="section light hidden">
+    <h2>Our Services</h2>
+    <p class="center">
+      We provide end-to-end construction, renovation, and plumbing solutions across Kenya — built on quality,
+      reliability, and engineering excellence.
     </p>
 
-    <div class="hero-buttons">
-      <a href="#contact" class="btn">Request Quote</a>
-      <a href="#projects" class="btn-outline">View Projects</a>
+    <div class="services-advanced">
+
+      <!-- 1 -->
+      <div class="service-advanced-card">
+        <div class="service-img">
+          <img src="images/image56.jpeg" alt="">
+          <div class="service-overlay">
+            <h3>Building & Civil Engineering</h3>
+          </div>
+        </div>
+
+        <div class="service-content">
+          <p>
+            We deliver complete building and civil engineering projects from concept to completion, strictly following
+            approved designs and specifications.
+          </p>
+
+          <p>
+            Our experienced team works closely with architects and engineers to ensure smooth execution, structural
+            integrity, and timely delivery.
+          </p>
+
+          <ul>
+            <li>Full-scale project execution</li>
+            <li>Structural & civil works</li>
+            <li>Site management & supervision</li>
+            <li>Labor-based contract options</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="service-advanced-card">
+        <div class="service-img">
+          <img src="images/image108.jpeg" alt="">
+          <div class="service-overlay">
+            <h3>Renovations & Upgrades</h3>
+          </div>
+        </div>
+
+        <div class="service-content">
+          <p>
+            We transform existing spaces into modern, functional, and efficient environments — tailored to your needs
+            and budget.
+          </p>
+
+          <ul>
+            <li>Residential & commercial renovations</li>
+            <li>Structural modifications</li>
+            <li>Roofing & finishing works</li>
+            <li>Repairs & ongoing maintenance</li>
+          </ul>
+
+          <p>
+            Whether it's a small upgrade or a full transformation, we deliver durable and cost-effective solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="service-advanced-card">
+        <div class="service-img">
+          <img src="images/image25.jpeg" alt="">
+          <div class="service-overlay">
+            <h3>Professional Plumbing Solutions</h3>
+          </div>
+        </div>
+
+        <div class="service-content">
+          <p>
+            We design, install, and maintain efficient plumbing systems that ensure reliable water flow, proper
+            drainage, and long-term performance.
+          </p>
+
+          <ul>
+            <li>Leak detection & pipe repairs</li>
+            <li>Drainage & waste systems</li>
+            <li>Water supply optimization</li>
+            <li>Fixture installation & servicing</li>
+            <li>Eco-friendly water-saving solutions</li>
+          </ul>
+
+          <p>
+            All our installations meet regulatory standards and use durable, high-quality materials.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TARGET CLIENTS -->
+  <section class="section hidden">
+    <h2>Targeted Clients</h2>
+    <p class="center">Our services are tailored to meet the needs of diverse clients across multiple sectors.</p>
+
+    <div class="clients-grid">
+
+      <div class="client-card">
+        <i data-feather="home"></i>
+        <h3>Private Homeowners & Developers</h3>
+        <p>Residential builds, villas, and renovations.</p>
+      </div>
+
+      <div class="client-card">
+        <i data-feather="book"></i>
+        <h3>Educational Institutions</h3>
+        <p>School blocks, laboratories, and facility upgrades.</p>
+      </div>
+
+      <div class="client-card">
+        <i data-feather="briefcase"></i>
+        <h3>Commercial Property Owners</h3>
+        <p>Commercial spaces, infrastructure, and system reliability solutions.</p>
+      </div>
+
+      <div class="client-card">
+        <i data-feather="map"></i>
+        <h3>Government & Public Institutions</h3>
+        <p>Civil works and large-scale infrastructure projects.</p>
+      </div>
+
+      <div class="client-card">
+        <i data-feather="tool"></i>
+        <h3>Architects & Engineers</h3>
+        <p>Reliable execution partners for project implementation.</p>
+      </div>
+
+      <div class="client-card">
+        <i data-feather="users"></i>
+        <h3>NGOs & Development Agencies</h3>
+        <p>Community-driven and institutional construction solutions.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section light hidden">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>On-Time Delivery</h3>
+        <p>We strictly follow timelines and ensure every milestone aligns with client expectations.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Experienced Team</h3>
+        <p>Certified engineers, builders, and skilled technicians delivering excellence.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Full-Service Offering</h3>
+        <p>Complete solutions from construction to renovation and plumbing.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Modern Machinery</h3>
+        <p>Advanced tools and equipment for efficiency and safety.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Client-Focused Solutions</h3>
+        <p>Every project is tailored to meet specific client needs and goals.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Compliance & Quality</h3>
+        <p>We adhere strictly to Kenyan and international construction standards.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION - FIXED SLIDESHOW -->
+  <section id="projects" class="section hidden">
+    <h2>Our Projects</h2>
+    <p class="center">
+      A showcase of our completed residential homes, educational facilities,
+      commercial structures, and plumbing installations.
+    </p>
+
+    <div class="projects-slider-container">
+      <div class="projects-slider">
+        <div class="projects-slides-wrapper">
+          <div class="projects-slides" id="projectsSlides">
+            <img src="images/image1.jpeg" alt="Project 1">
+            <img src="images/image2.jpeg" alt="Project 2">
+            <img src="images/image3.jpeg" alt="Project 3">
+            <img src="images/image4.jpeg" alt="Project 4">
+            <img src="images/image5.jpeg" alt="Project 5">
+            <img src="images/image6.jpeg" alt="Project 6">
+            <img src="images/image7.jpeg" alt="Project 7">
+            <img src="images/image8.jpeg" alt="Project 8">
+            <img src="images/image9.jpeg" alt="Project 9">
+            <img src="images/image10.jpeg" alt="Project 10">
+            <img src="images/image11.jpeg" alt="Project 11">
+          </div>
+        </div>
+        <button class="projects-prev" id="projectsPrevBtn">❮</button>
+        <button class="projects-next" id="projectsNextBtn">❯</button>
+      </div>
+      <div class="projects-dots" id="projectsDots"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section hidden">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div>
+        <p style="margin-bottom: 12px;"><i data-feather="mail" style="width: 20px; display: inline-block;"></i>
+          <strong>Email:</strong> info@onwood.co.ke</p>
+        <p><i data-feather="phone" style="width: 20px;"></i> <strong>Phone:</strong> +254 722 123 456</p>
+        <p style="margin-top: 20px;"><i data-feather="map-pin"></i> Nairobi, Kenya | Westlands</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required id="nameInput">
+        <input type="email" placeholder="Email" required id="emailInput">
+        <textarea rows="4" placeholder="Message" id="msgInput"></textarea>
+        <button type="submit" class="btn" style="border:none; cursor:pointer;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Onwood Enterprises — Built with excellence.</p>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox-modal">
+    <button class="close-lightbox" id="closeLightboxBtn">&times;</button>
+    <img id="lightboxImg" class="lightbox-img" alt="enlarged view">
+  </div>
+
+  <!-- QUOTE MODAL -->
+  <div id="quoteModal" class="quote-modal">
+    <div class="quote-box">
+      <button class="close-quote" onclick="closeQuoteModal()">&times;</button>
+      <h2>Request a Quote</h2>
+      <p>Fill in your project details and our team will get back to you within 24 hours.</p>
+      <form id="quoteForm">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option>Building & Civil Works</option>
+          <option>Renovations</option>
+          <option>Plumbing</option>
+        </select>
+        <input type="text" name="location" placeholder="Project Location (e.g Nairobi, Westlands)" required>
+        <textarea name="message" rows="4" placeholder="Describe your project..." required></textarea>
+        <button type="submit" class="btn" style="border:none;">Submit Request</button>
+      </form>
     </div>
   </div>
-</section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="stat">
-    <h2>15+</h2>
-    <p>Years Experience</p>
-  </div>
-  <div class="stat">
-    <h2>200+</h2>
-    <p>Projects Completed</p>
-  </div>
-  <div class="stat">
-    <h2>100%</h2>
-    <p>Client Satisfaction</p>
-  </div>
-</section>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
 
-<!-- ABOUT -->
-<section id="about" class="section hidden">
-  <h2>About Us</h2>
-  <p class="center">
-    We deliver high-quality construction solutions across Kenya,
-    combining engineering expertise, innovation, and reliability.
-  </p>
+    // Initialize EmailJS with your Public Key
+    (function () {
+      emailjs.init("DoS9VcHfjOt63ge-O");
+    })();
 
-  <div class="about-grid">
-    <div class="card">
-      <i data-feather="target"></i>
-      <h3>Our Mission</h3>
-      <p>Deliver durable and efficient construction projects.</p>
-    </div>
+    // Mobile menu toggle
+    window.toggleMenu = function () {
+      document.getElementById("navLinks").classList.toggle("active");
+    };
 
-    <div class="card">
-      <i data-feather="eye"></i>
-      <h3>Our Vision</h3>
-      <p>To be Kenya’s most trusted construction company.</p>
-    </div>
-  </div>
-</section>
+    // Navbar scroll effect
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector(".navbar");
+      if (window.scrollY > 50) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
+    });
 
-<!-- SERVICES -->
-<section id="services" class="section light hidden">
-  <h2>Our Services</h2>
+    // Intersection Observer for reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 
-  <div class="grid">
-    <div class="card">
-      <i data-feather="home"></i>
-      <h3>Construction</h3>
-      <p>Residential & commercial projects.</p>
-    </div>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
 
-    <div class="card">
-      <i data-feather="tool"></i>
-      <h3>Civil Engineering</h3>
-      <p>Roads, drainage & infrastructure.</p>
-    </div>
+    // ------------------------------
+    // ABOUT SECTION SLIDESHOW
+    // ------------------------------
+    const track = document.getElementById('sliderTrack');
+    const aboutSlides = Array.from(document.querySelectorAll('.slider-img'));
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+    const dotsContainer = document.getElementById('dotsContainer');
 
-    <div class="card">
-      <i data-feather="refresh-cw"></i>
-      <h3>Renovations</h3>
-      <p>Modern upgrades & remodeling.</p>
-    </div>
+    let aboutCurrentIndex = 0;
+    let aboutAutoInterval;
+    const aboutSlideCount = aboutSlides.length;
 
-    <div class="card">
-      <i data-feather="droplet"></i>
-      <h3>Plumbing</h3>
-      <p>Reliable water systems.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section hidden">
-  <h2>Our Projects</h2>
-
-  <div class="grid">
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-      <div class="overlay">Apartment Complex</div>
-    </div>
-
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1581093458791-9d42ccfa8a93">
-      <div class="overlay">Road Construction</div>
-    </div>
-
-    <div class="project">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
-      <div class="overlay">Commercial Building</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section hidden">
-  <h2>Contact Us</h2>
-
-  <div class="contact-grid">
-    <div>
-      <p>Email: info@onwood.co.ke</p>
-      <p>Phone: +254 7XX XXX XXX</p>
-    </div>
-
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message"></textarea>
-      <button class="btn">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Onwood Enterprises</p>
-</footer>
-
-<script>
-  window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".navbar");
-  
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
+    function createAboutDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < aboutSlideCount; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === aboutCurrentIndex) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          goToAboutSlide(i);
+          resetAboutAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+      }
     }
-  });
+
+    function updateAboutDots() {
+      const dots = document.querySelectorAll('#dotsContainer .dot');
+      dots.forEach((dot, idx) => {
+        if (idx === aboutCurrentIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    function goToAboutSlide(index) {
+      if (index < 0) index = aboutSlideCount - 1;
+      if (index >= aboutSlideCount) index = 0;
+      aboutCurrentIndex = index;
+      track.style.transform = `translateX(-${aboutCurrentIndex * 100}%)`;
+      updateAboutDots();
+    }
+
+    function nextAboutSlide() {
+      goToAboutSlide(aboutCurrentIndex + 1);
+    }
+
+    function prevAboutSlide() {
+      goToAboutSlide(aboutCurrentIndex - 1);
+    }
+
+    function resetAboutAutoPlay() {
+      if (aboutAutoInterval) clearInterval(aboutAutoInterval);
+      aboutAutoInterval = setInterval(() => {
+        nextAboutSlide();
+      }, 4500);
+    }
+
+    let aboutResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(aboutResizeTimer);
+      aboutResizeTimer = setTimeout(() => {
+        goToAboutSlide(aboutCurrentIndex);
+      }, 150);
+    });
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevAboutSlide();
+        resetAboutAutoPlay();
+      });
+      nextBtn.addEventListener('click', () => {
+        nextAboutSlide();
+        resetAboutAutoPlay();
+      });
+    }
+
+    function initAboutSlider() {
+      if (aboutSlides.length > 0) {
+        createAboutDots();
+        goToAboutSlide(0);
+        resetAboutAutoPlay();
+        aboutSlides.forEach(slide => {
+          slide.style.flex = '0 0 100%';
+        });
+      }
+    }
+    initAboutSlider();
+
+    // ------------------------------
+    // PROJECTS SECTION SLIDESHOW 
+    // ------------------------------
+    const projectsSlides = document.getElementById('projectsSlides');
+    const projectImages = Array.from(document.querySelectorAll('#projectsSlides img'));
+    const projectsPrevBtn = document.getElementById('projectsPrevBtn');
+    const projectsNextBtn = document.getElementById('projectsNextBtn');
+    const projectsDotsContainer = document.getElementById('projectsDots');
+
+    let projectsCurrentIndex = 0;
+    let projectsAutoInterval;
+    const projectsCount = projectImages.length;
+
+    function createProjectsDots() {
+      if (projectsDotsContainer) {
+        projectsDotsContainer.innerHTML = '';
+        for (let i = 0; i < projectsCount; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('project-dot');
+          if (i === projectsCurrentIndex) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            goToProjectSlide(i);
+            resetProjectsAutoPlay();
+          });
+          projectsDotsContainer.appendChild(dot);
+        }
+      }
+    }
+
+    function updateProjectsDots() {
+      const dots = document.querySelectorAll('.project-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === projectsCurrentIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    function goToProjectSlide(index) {
+      if (index < 0) index = projectsCount - 1;
+      if (index >= projectsCount) index = 0;
+      projectsCurrentIndex = index;
+      if (projectsSlides) {
+        projectsSlides.style.transform = `translateX(-${projectsCurrentIndex * 100}%)`;
+      }
+      updateProjectsDots();
+    }
+
+    function nextProjectSlide() {
+      goToProjectSlide(projectsCurrentIndex + 1);
+    }
+
+    function prevProjectSlide() {
+      goToProjectSlide(projectsCurrentIndex - 1);
+    }
+
+    function resetProjectsAutoPlay() {
+      if (projectsAutoInterval) clearInterval(projectsAutoInterval);
+      projectsAutoInterval = setInterval(() => {
+        nextProjectSlide();
+      }, 4000);
+    }
+
+    let projectsResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(projectsResizeTimer);
+      projectsResizeTimer = setTimeout(() => {
+        goToProjectSlide(projectsCurrentIndex);
+      }, 150);
+    });
+
+    if (projectsPrevBtn && projectsNextBtn) {
+      projectsPrevBtn.addEventListener('click', () => {
+        prevProjectSlide();
+        resetProjectsAutoPlay();
+      });
+      projectsNextBtn.addEventListener('click', () => {
+        nextProjectSlide();
+        resetProjectsAutoPlay();
+      });
+    }
+
+    function initProjectsSlider() {
+      if (projectImages.length > 0) {
+        createProjectsDots();
+        goToProjectSlide(0);
+        resetProjectsAutoPlay();
+        projectImages.forEach(img => {
+          img.style.flex = '0 0 100%';
+          img.style.width = '100%';
+          img.style.objectFit = 'cover';
+        });
+      }
+    }
+    initProjectsSlider();
+
+    // LIGHTBOX functionality
+    const lightboxModal = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeLightbox = document.getElementById('closeLightboxBtn');
+
+    function openLightbox(imgSrc) {
+      lightboxImg.src = imgSrc;
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightboxModal() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Add lightbox to about slider images
+    aboutSlides.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(img.src);
+      });
+    });
+
+    // Add lightbox to project slider images
+    projectImages.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(img.src);
+      });
+    });
+
+    if (closeLightbox) {
+      closeLightbox.addEventListener('click', closeLightboxModal);
+    }
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightboxModal();
+      });
+    }
+
+    // Quote Modal functions
+    window.openQuoteModal = function () {
+      const modal = document.getElementById("quoteModal");
+      if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    window.closeQuoteModal = function () {
+      const modal = document.getElementById("quoteModal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    // ============================================
+    // EMAILJS QUOTE FORM SUBMISSION - FULLY WORKING
+    // ============================================
+    const quoteForm = document.getElementById("quoteForm");
+
+    if (quoteForm) {
+      quoteForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = quoteForm.querySelector('input[name="name"]').value;
+        const email = quoteForm.querySelector('input[name="email"]').value;
+        const phone = quoteForm.querySelector('input[name="phone"]').value;
+        const service = quoteForm.querySelector('select[name="service"]').value;
+        const location = quoteForm.querySelector('input[name="location"]').value;
+        const message = quoteForm.querySelector('textarea[name="message"]').value;
+
+        // Show loading state on button
+        const submitBtn = quoteForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "Sending...";
+        submitBtn.disabled = true;
+
+        // Prepare template parameters for EmailJS
+        // You need to create a template in your EmailJS dashboard with these variables:
+        // {{name}}, {{email}}, {{phone}}, {{service}}, {{location}}, {{message}}
+        const templateParams = {
+          name: name,
+          email: email,
+          phone: phone,
+          service: service,
+          location: location,
+          message: message,
+          to_email: "kazunguvictor12@gmail.com"  // This will be your receiving email
+        };
+
+        // Send email using EmailJS
+        // IMPORTANT: Replace "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your actual IDs from EmailJS
+        // Service ID: Create an email service in EmailJS dashboard (e.g., gmail, outlook, etc.)
+        // Template ID: Create an email template in EmailJS dashboard
+
+        emailjs.send("service_gwex1fb", "template_0mb0lyj", templateParams)
+          .then(function (response) {
+            console.log("Email sent successfully!", response.status, response.text);
+
+            // Show success message
+            alert("✅ Thank you " + name + "! Your quote request has been sent successfully. Our team will contact you within 24 hours.");
+
+            // Reset form
+            quoteForm.reset();
+
+            // Close modal
+            closeQuoteModal();
+          })
+          .catch(function (error) {
+            console.error("FULL ERROR OBJECT:", error);
+
+            alert("Error:\n" + JSON.stringify(error));
+
+            if (error.text) {
+              alert("Error message: " + error.text);
+            }
+          })
+        .finally(function () {
+          // Restore button
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+        });
+      });
+    }
+
+    // Contact form handler (simple alert for now - can also be upgraded to EmailJS)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(`Thank you for reaching out, ${document.getElementById('nameInput').value || 'Guest'}! Onwood team will respond within 24 hours.`);
+        contactForm.reset();
+      });
+    }
+
+    setTimeout(() => feather.replace(), 300);
   </script>
-<script>
-feather.replace();
-
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
-}
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
-document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
-</script>
-
 </body>
+
 </html>
